@@ -32,6 +32,8 @@ module.exports = function (context, cb) {
 
 var go = async(function (context, cb) {
 
+    await(get_tags());
+
     // add tags by match topic title
     new_tags = check_title(new_tags, topic);
     
@@ -46,7 +48,7 @@ var go = async(function (context, cb) {
 
 });
 
-function get_tags(link){
+function get_tags(){
     return axios.get("https://raw.githubusercontent.com/PDIS/discourse-tagger/master/tags.json")
         .then(body=>{
             tags = body.data;
