@@ -28,11 +28,8 @@ module.exports = function (context, cb) {
 
 var go = async(function (context, cb) {
 
-    console.log(tags)
 
     await(get_tags());
-
-    console.log(tags)
 
     // add tags by match topic title
     new_tags = check_title(new_tags, topic);
