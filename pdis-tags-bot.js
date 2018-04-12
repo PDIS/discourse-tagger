@@ -17,10 +17,6 @@ module.exports = function (context, cb) {
     topic = context.data.topic;
     topic_id = topic.id;
     topic_slug = topic.slug;
-    tags = {
-        "開放政府": ["開放政府", "公民參與"],
-        "社會企業": ["社企", "社會企業", "社創中心", "社會創新"]
-    }
     topic_tags = topic.tags.slice();
     new_tags = topic.tags.slice();
 
