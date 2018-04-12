@@ -46,6 +46,13 @@ var go = async(function (context, cb) {
 
 });
 
+function get_tags(link){
+    return axios.get("https://raw.githubusercontent.com/PDIS/discourse-tagger/master/tags.json")
+            .then(body=>{
+                tags = body.data;
+            })
+}
+
 function check_sayit_content(old_tags, contents) {
 
     new_tags = old_tags.slice();
