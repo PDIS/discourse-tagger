@@ -28,7 +28,6 @@ module.exports = function (context, cb) {
 
 var go = async(function (context, cb) {
 
-
     await(get_tags());
 
     // add tags by match topic title
