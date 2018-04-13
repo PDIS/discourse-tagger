@@ -111,7 +111,7 @@ function update_discourse(new_tags) {
         .catch(err => err);
     }
     else{
-      return new Promise.resolve(tags)
+      return Promise.resolve(tags)
     }
 }
 
