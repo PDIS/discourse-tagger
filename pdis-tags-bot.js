@@ -59,7 +59,7 @@ function check_sayit_content(old_tags, contents) {
         let all_content = contents.reduce((all, content) => all + content);
         Object.keys(tags).forEach((tag) => {
             keywords = tags[tag];
-            if (keywords.filter(keyword => all_content.includes(keyword)).length > 0) {
+            if (keywords.filter(keyword => all_content.toLowerCase().includes(keyword)).length > 0) {
                 new_tags.push(tag)
             }
         });
@@ -74,7 +74,7 @@ function check_title(old_tags) {
 
     Object.keys(tags).forEach((tag) => {
         keywords = tags[tag];
-        if (keywords.filter(keyword => topic.title.includes(keyword)).length > 0) {
+        if (keywords.filter(keyword => topic.title.toLowerCase().includes(keyword)).length > 0) {
             new_tags.push(tag);
         }
     })
